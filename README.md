@@ -1,4 +1,4 @@
-# react-with-message-bar
+# react-use-message-bar
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
