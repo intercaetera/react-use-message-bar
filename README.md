@@ -63,7 +63,7 @@ The `MessageBar` component is injected with two props:
 The `DefaultMessageBar` component will be used if the `MessageBar` is not provided - see the source for an example how to build it.
 
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
+[build-badge]: https://travis-ci.org/intercaetera/react-use-message-bar.svg?branch=master
 [build]: https://travis-ci.org/intercaetera/react-use-message-bar
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
