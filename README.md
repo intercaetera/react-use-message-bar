@@ -46,7 +46,7 @@ This hook returns an object with the following properties:
 
 - `deleteNotification(id)` - deletes a notification with a given id
 
-- `deleteNotification()` - deletes all notifications
+- `deleteAllNotifications()` - deletes all notifications
 
 - `props` - an object that should be passed to the `MessageBarSlot` to render the notifications properly.
 
