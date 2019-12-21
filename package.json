@@ -1,7 +1,7 @@
 {
-  "name": "react-with-message-bar",
+  "name": "react-use-message-bar",
   "version": "1.0.0",
-  "description": "react-with-message-bar React component",
+  "description": "useMessageBar React Hook",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -15,26 +15,46 @@
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch --verbose",
     "lint": "eslint ."
   },
-  "dependencies": {},
+  "dependencies": {
+    "shortid": "^2.2.15"
+  },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "^16.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/preset-react": "^7.7.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.2.1",
+    "babel-jest": "^24.9.0",
     "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
     "nwb": "0.23.x",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0"
   },
   "author": "",
   "homepage": "",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
-  ]
+    "react",
+    "react hook",
+    "hook",
+    "message bar"
+  ],
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
+  }
 }

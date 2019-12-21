@@ -1,15 +1,22 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
+import React from 'react';
+import { render } from 'react-dom';
 
-import Example from '../../src';
+import useMessageBar from '../../src/useMessageBar';
+import MessageBarSlotFactory from '../../src/MessageBarSlotFactory';
 
-class Demo extends Component {
-	render() {
-		return <div>
-			<h1>react-with-message-bar Demo</h1>
-			<Example/>
-		</div>;
-	}
-}
+const MessageBarSlot = MessageBarSlotFactory();
 
-render(<Demo/>, document.querySelector('#demo'));
+const Demo = () => {
+	const { createNotification, props } = useMessageBar();
+
+	const handleClick = () => createNotification(Date.now());
+
+	return (
+		<div>
+			<MessageBarSlot {...props} />
+			<button onClick={handleClick}>Create Bar</button>
+		</div>
+	);
+};
+
+render(<Demo />, document.querySelector('#demo'));
