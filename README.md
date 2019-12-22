@@ -66,7 +66,7 @@ The `DefaultMessageBar` component will be used if the `MessageBar` is not provid
 [build-badge]: https://travis-ci.org/intercaetera/react-use-message-bar.svg?branch=master
 [build]: https://travis-ci.org/intercaetera/react-use-message-bar
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/react-use-message-bar.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-use-message-bar
 
 [coveralls-badge]: https://coveralls.io/repos/github/intercaetera/react-use-message-bar/badge.svg?branch=master
