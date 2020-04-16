@@ -4,7 +4,7 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-A simple message bar hook for React.
+A simple message bar hook for React. Read more about it in the [blog post](https://intercaetera.com/2020-01-31-the-story-of-react-use-message-bar/).
 
 ## Installation
 
