@@ -1,6 +1,6 @@
 {
   "name": "react-use-message-bar",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "useMessageBar React Hook",
   "main": "lib/index.js",
   "module": "es/index.js",
