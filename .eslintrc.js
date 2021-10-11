@@ -1,30 +1,31 @@
 module.exports = {
 	env: {
 		browser: true,
-    es6: true,
-    jest: true,
+		es6: true,
+		jest: true,
+		node: true,
 	},
-	extends: "eslint:recommended",
+	extends:[ 'eslint:recommended', 'plugin:jsdoc/recommended'],
 	globals: {
-		Atomics: "readonly",
-		SharedArrayBuffer: "readonly"
+		Atomics: 'readonly',
+		SharedArrayBuffer: 'readonly',
 	},
 	parserOptions: {
 		ecmaFeatures: {
-			jsx: true
+			jsx: true,
 		},
 		ecmaVersion: 2018,
-		sourceType: "module"
+		sourceType: 'module',
 	},
-	plugins: ["react"],
+	plugins: ['react', 'eslint-plugin-jsdoc'],
 	rules: {
-		indent: ["error", "tab"],
-		"linebreak-style": ["error", "unix"],
-		quotes: ["error", "single"],
-		semi: ["error", "always"],
-		"comma-dangle": ["error", "always-multiline"],
+		indent: ['error', 'tab'],
+		'linebreak-style': ['error', 'unix'],
+		quotes: ['error', 'single'],
+		semi: ['error', 'always'],
+		'comma-dangle': ['error', 'always-multiline'],
 
-		"react/jsx-uses-react": 1,
-		"react/jsx-uses-vars": 1
-	}
+		'react/jsx-uses-react': 1,
+		'react/jsx-uses-vars': 1,
+	},
 };

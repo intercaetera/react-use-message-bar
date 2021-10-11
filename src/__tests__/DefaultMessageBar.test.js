@@ -12,7 +12,7 @@ test('renders children', () => {
 	const { getByText } = render(
 		<DefaultMessageBar handleDismiss={handleDismiss}>
 			{content}
-		</DefaultMessageBar>
+		</DefaultMessageBar>,
 	);
 
 	// then
@@ -24,7 +24,7 @@ test('fires the dismiss function when the X is clicked', () => {
 	const dismiss = jest.fn();
 
 	const { getByTestId } = render(
-		<DefaultMessageBar handleDismiss={dismiss}>content</DefaultMessageBar>
+		<DefaultMessageBar handleDismiss={dismiss}>content</DefaultMessageBar>,
 	);
 
 	// when
