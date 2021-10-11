@@ -20,7 +20,7 @@ test('creates a slot for a custom component', () => {
 	// when
 	const MessageBarSlot = MessageBarSlotFactory(TestMessageBar);
 	const { getByText } = render(
-		<MessageBarSlot bars={bars} deleteNotification={deleteNotification} />
+		<MessageBarSlot bars={bars} deleteNotification={deleteNotification} />,
 	);
 
 	// then
@@ -43,7 +43,7 @@ test('renders a message bar for each bar passed', () => {
 
 	// when
 	const { getByText } = render(
-		<MessageBarSlot bars={bars} deleteNotification={deleteNotification} />
+		<MessageBarSlot bars={bars} deleteNotification={deleteNotification} />,
 	);
 
 	// then
@@ -57,7 +57,7 @@ test('calls the delete notification function with the correct id when the X is c
 	const bars = [{ id: TEST_ID, content: 'alpha' }];
 	const deleteNotification = jest.fn();
 	const { getByTestId } = render(
-		<MessageBarSlot bars={bars} deleteNotification={deleteNotification} />
+		<MessageBarSlot bars={bars} deleteNotification={deleteNotification} />,
 	);
 
 	// when
