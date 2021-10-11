@@ -20,26 +20,26 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "shortid": "^2.2.15"
+    "shortid": "^2.2.16"
   },
   "peerDependencies": {
-    "react": "^16.12.0"
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.5",
-    "@babel/preset-react": "^7.7.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/react-hooks": "^3.2.1",
-    "babel-jest": "^24.9.0",
-    "eslint-plugin-react": "^7.16.0",
-    "jest": "^24.9.0",
-    "nwb": "0.23.x",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "babel-jest": "^27.2.5",
+    "eslint-plugin-react": "^7.26.1",
+    "jest": "^27.2.5",
+    "nwb": "0.25.x",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-test-renderer": "^16.12.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2"
   },
   "author": "",
   "homepage": "",
@@ -54,6 +54,7 @@
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"
-    ]
+    ],
+    "testEnvironment": "jsdom"
   }
 }
