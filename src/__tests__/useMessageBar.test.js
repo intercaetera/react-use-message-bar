@@ -3,6 +3,19 @@ import { renderHook, act } from '@testing-library/react-hooks';
 
 import useMessageBar from '../useMessageBar';
 
+jest.mock('shortid', () => ({
+	generate: jest.fn(() => 42),
+}));
+
+test('if provided with no initial state, does not render anything', () => {
+	// given -
+	// when
+	const { result } = renderHook(() => useMessageBar());
+
+	// then
+	expect(result.current.bars).toEqual([]);
+});
+
 test('renders with initial state', () => {
 	// given
 	const initialState = [{ id: 0, content: 'alpha' }];
@@ -23,6 +36,17 @@ test('creates a notification when createNotification is called', () => {
 
 	// then
 	expect(result.current.bars).toEqual([{ id: 0, content: 'alpha' }]);
+});
+
+test('generates a shortid when no id is provided', () => {
+	// given
+	const { result } = renderHook(() => useMessageBar([]));
+
+	// when
+	act(() => result.current.createNotification('alpha'));
+
+	// then
+	expect(result.current.bars).toEqual([{ id: 42, content: 'alpha' }]);
 });
 
 test('deletes a notification when deleteNotification is called', () => {
